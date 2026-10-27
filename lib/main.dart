@@ -1,6 +1,8 @@
 import 'package:athaar_app/home/splash_screen.dart';
 import 'package:athaar_app/home/tabs/home_tab/icons_button/artifacts_list.dart';
 import 'package:athaar_app/home/tabs/home_tab/icons_button/events_list.dart';
+import 'package:athaar_app/home/tabs/home_tab/icons_button/experience_near_you_screen.dart';
+import 'package:athaar_app/home/tabs/home_tab/icons_button/museums_details.dart';
 import 'package:athaar_app/home/tabs/home_tab/icons_button/museums_list.dart';
 import 'package:athaar_app/home/tabs/home_tab/icons_button/nearby_list.dart';
 import 'package:athaar_app/home/tabs/home_tab/see_all/experience_near_see_all.dart';
@@ -44,8 +46,8 @@ class MyApp extends StatelessWidget {
     var themeProvider = Provider.of<AppThemeProvider>(context);
     return MaterialApp(
       home: SplashScreen(),
-      debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.homeRouteScreen,
+      debugShowCheckedModeBanner: false,
       routes: {
         AppRoutes.onBoardingRouteScreen: (context) => OnBoardingScreen(),
         AppRoutes.homeRouteScreen: (context) => HomeScreen(),
@@ -57,6 +59,8 @@ class MyApp extends StatelessWidget {
         AppRoutes.eventsScreen: (context) => EventsList(),
         AppRoutes.fMSeeAllScreen: (context) => FeaturedMuseumsSeeAll(),
         AppRoutes.eNSeeAllScreen: (context) => ExperienceNearSeeAll(),
+        AppRoutes.museumsDetailsScreen: (context) => MuseumsDetails(),
+        AppRoutes.experienceScreen: (context) => ExperienceNearYouScreen(),
 
       },
       localizationsDelegates: AppLocalizations.localizationsDelegates,

@@ -9,4 +9,6 @@ class AppRoutes {
   static const String eventsScreen = 'events_screen';
   static const String fMSeeAllScreen = 'featured_screen';
   static const String eNSeeAllScreen = 'experience_screen';
+  static const String experienceScreen = 'experience_screen';
+  static const String museumsDetailsScreen = 'museums_details_screen';
 }
