@@ -190,7 +190,19 @@ class _HomeTabState extends State<HomeTab> {
                   ),
                 ],
               ),
-              ListViewWidget(),
+              ListViewWidget(
+                size: 30,
+                style: AppStyle.bold16White,
+                icon: Icons.arrow_circle_right_outlined,
+                height: 171 ,
+                itemWidth: 320,
+                images: [ AppImage.grandMuseumImage,
+                  AppImage.graecoRomanMuseumImage,
+                  AppImage.islamicArtMuseumImage,],
+                titles: [  AppLocalizations.of(context)!.grand_egyption_museum,
+                  AppLocalizations.of(context)!.graeco_roman_museum,
+                  AppLocalizations.of(context)!.islamic_arts_museum,],
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -213,7 +225,28 @@ class _HomeTabState extends State<HomeTab> {
                   ),
                 ],
               ),
-              ListViewWidget(),
+              InkWell(
+                onTap: (){
+                  Navigator.pushReplacementNamed(
+                    context,
+                    AppRoutes.museumsDetailsScreen,
+                  );
+                },
+                child: ListViewWidget(
+                  size: 20,
+                  icon: Icons.location_on_outlined,
+                  style: AppStyle.bold14White,
+                  height: 120,
+                  itemWidth: 200,
+                  images: [ AppImage.grandMuseumImage,
+                    AppImage.graecoRomanMuseumImage,
+                    AppImage.islamicArtMuseumImage,],
+                  titles: [  AppLocalizations.of(context)!.grand_egyption_museum,
+                    AppLocalizations.of(context)!.graeco_roman_museum,
+                    AppLocalizations.of(context)!.islamic_arts_museum,],
+                ),
+              ),
+
             ],
           ),
         ),
